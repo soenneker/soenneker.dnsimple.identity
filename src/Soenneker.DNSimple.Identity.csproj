@@ -40,9 +40,8 @@
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\icon.png" Pack="true" PackagePath="\" />
     </ItemGroup>
-
+    
     <ItemGroup>
-        <PackageReference Include="Soenneker.DNSimple.Client" Version="3.0.163" />
-        <PackageReference Include="Soenneker.Extensions.HttpClient" Version="3.0.3310" />
+      <PackageReference Include="Soenneker.DNSimple.OpenApiClientUtil" Version="3.0.2" />
     </ItemGroup>
 </Project>

@@ -1,13 +1,16 @@
-﻿using Soenneker.DNSimple.Identity.Responses;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
+using Soenneker.DNSimple.OpenApiClient.Whoami;
 
 namespace Soenneker.DNSimple.Identity.Abstract;
 
 /// <summary>
-/// A .NET typesafe implementation of DNSimple's Identity API
+/// Utility class for managing DNSimple identity operations
 /// </summary>
 public interface IDNSimpleIdentityUtil
 {
-    ValueTask<DNSimpleWhoamiResponse?> Whoami(CancellationToken cancellationToken = default);
+    /// <summary>
+    /// Retrieves the details about the current authenticated entity used to access the API.
+    /// </summary>
+    ValueTask<WhoamiGetResponse_data?> Whoami(CancellationToken cancellationToken = default);
 }

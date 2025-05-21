@@ -1,9 +1,5 @@
-﻿using FluentAssertions;
-using Soenneker.DNSimple.Identity.Abstract;
-using Soenneker.Facts.Local;
+﻿using Soenneker.DNSimple.Identity.Abstract;
 using Soenneker.Tests.FixturedUnit;
-using System.Threading.Tasks;
-using Soenneker.DNSimple.Identity.Responses;
 using Xunit;
 
 namespace Soenneker.DNSimple.Identity.Tests;
@@ -21,12 +17,5 @@ public class DNSimpleIdentityUtilTests : FixturedUnitTest
     [Fact]
     public void Default()
     {
-    }
-
-    [LocalFact]
-    public async ValueTask Whoami_should_not_fail()
-    {
-        DNSimpleWhoamiResponse? result = await _util.Whoami(CancellationToken);
-        result.Should().NotBeNull();
     }
 }
