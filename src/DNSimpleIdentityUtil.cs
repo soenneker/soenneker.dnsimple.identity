@@ -1,9 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Soenneker.DNSimple.Identity.Abstract;
+﻿using Soenneker.DNSimple.Identity.Abstract;
 using Soenneker.DNSimple.OpenApiClient;
 using Soenneker.DNSimple.OpenApiClient.Whoami;
 using Soenneker.DNSimple.OpenApiClientUtil.Abstract;
+using Soenneker.Extensions.Task;
+using Soenneker.Extensions.ValueTask;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Soenneker.DNSimple.Identity;
 
@@ -19,8 +21,8 @@ public sealed class DNSimpleIdentityUtil : IDNSimpleIdentityUtil
 
     public async ValueTask<WhoamiGetResponse_data?> Whoami(CancellationToken cancellationToken = default)
     {
-        DNSimpleOpenApiClient client = await _clientUtil.Get(cancellationToken);
-        WhoamiGetResponse? response = await client.Whoami.GetAsWhoamiGetResponseAsync(cancellationToken: cancellationToken);
+        DNSimpleOpenApiClient client = await _clientUtil.Get(cancellationToken).NoSync();
+        WhoamiGetResponse? response = await client.Whoami.GetAsWhoamiGetResponseAsync(cancellationToken: cancellationToken).NoSync();
         return response?.Data;
     }
 }
