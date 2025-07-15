@@ -19,7 +19,7 @@ public sealed class DNSimpleIdentityUtil : IDNSimpleIdentityUtil
         _clientUtil = clientUtil;
     }
 
-    public async ValueTask<WhoamiGetResponse_data?> Whoami(CancellationToken cancellationToken = default)
+    public async ValueTask<WhoamiGetResponse.WhoamiGetResponse_data?> Whoami(CancellationToken cancellationToken = default)
     {
         DNSimpleOpenApiClient client = await _clientUtil.Get(cancellationToken).NoSync();
         WhoamiGetResponse? response = await client.Whoami.GetAsWhoamiGetResponseAsync(cancellationToken: cancellationToken).NoSync();
