@@ -1,6 +1,6 @@
 ﻿using Soenneker.DNSimple.Identity.Abstract;
 using Soenneker.DNSimple.OpenApiClient;
-using Soenneker.DNSimple.OpenApiClient.Whoami;
+using Soenneker.DNSimple.OpenApiClient.Models;
 using Soenneker.DNSimple.OpenApiClientUtil.Abstract;
 using Soenneker.Extensions.Task;
 using Soenneker.Extensions.ValueTask;
@@ -19,10 +19,10 @@ public sealed class DNSimpleIdentityUtil : IDNSimpleIdentityUtil
         _clientUtil = clientUtil;
     }
 
-    public async ValueTask<WhoamiGetResponse.WhoamiGetResponse_data?> Whoami(CancellationToken cancellationToken = default)
+    public async ValueTask<Whoami200.Whoami200_data?> Whoami(CancellationToken cancellationToken = default)
     {
         DNSimpleOpenApiClient client = await _clientUtil.Get(cancellationToken).NoSync();
-        WhoamiGetResponse? response = await client.Whoami.GetAsync(cancellationToken: cancellationToken).NoSync();
+        Whoami200? response = await client.Whoami.GetAsync(cancellationToken: cancellationToken).NoSync();
         return response?.Data;
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using Soenneker.DNSimple.OpenApiClient.Whoami;
+using Soenneker.DNSimple.OpenApiClient.Models;
 
 namespace Soenneker.DNSimple.Identity.Abstract;
 
@@ -12,5 +12,5 @@ public interface IDNSimpleIdentityUtil
     /// <summary>
     /// Retrieves the details about the current authenticated entity used to access the API.
     /// </summary>
-    ValueTask<WhoamiGetResponse.WhoamiGetResponse_data?> Whoami(CancellationToken cancellationToken = default);
+    ValueTask<Whoami200.Whoami200_data?> Whoami(CancellationToken cancellationToken = default);
 }
