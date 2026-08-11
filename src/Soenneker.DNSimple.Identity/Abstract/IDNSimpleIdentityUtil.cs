@@ -12,5 +12,5 @@ public interface IDNSimpleIdentityUtil
     /// <summary>
     /// Retrieves the details about the current authenticated entity used to access the API.
     /// </summary>
-    ValueTask<Whoami200.Whoami200_data?> Whoami(CancellationToken cancellationToken = default);
+    ValueTask<Whoami200ResponseData?> Whoami(CancellationToken cancellationToken = default);
 }
