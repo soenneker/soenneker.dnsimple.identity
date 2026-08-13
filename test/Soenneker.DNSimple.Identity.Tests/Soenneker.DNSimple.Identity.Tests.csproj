@@ -19,10 +19,17 @@
     </ItemGroup>
 
     <ItemGroup>
+<<<<<<< HEAD
         <PackageReference Include="Soenneker.Tests.Attributes.Local" Version="4.0.69" />
         <PackageReference Include="Soenneker.Utils.Test" Version="4.0.323" />
         <PackageReference Include="Soenneker.Tests.HostedUnit" Version="4.0.180" />
         <PackageReference Include="TUnit" Version="1.64.6" />
+=======
+        <PackageReference Include="Soenneker.Tests.Attributes.Local" Version="4.0.75" />
+        <PackageReference Include="Soenneker.Utils.Test" Version="4.0.324" />
+        <PackageReference Include="Soenneker.Tests.HostedUnit" Version="4.0.183" />
+        <PackageReference Include="TUnit" Version="1.64.13" />
+>>>>>>> c4dc0f381ac87355a9252f090b23624e4bd67ba8
     </ItemGroup>
 
     <ItemGroup>
