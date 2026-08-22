@@ -25,6 +25,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <PackageReference Include="Soenneker.Tests.Attributes.Local" Version="4.0.69" />
         <PackageReference Include="Soenneker.Utils.Test" Version="4.0.323" />
         <PackageReference Include="Soenneker.Tests.HostedUnit" Version="4.0.180" />
@@ -55,6 +56,9 @@
 =======
         <PackageReference Include="Soenneker.Tests.Attributes.Local" Version="4.0.81" />
 >>>>>>> 3dbf009e8cc0aa33b46b3ebd6ed60d899b29c7e3
+=======
+        <PackageReference Include="Soenneker.Tests.Attributes.Local" Version="4.0.82" />
+>>>>>>> 5638c45a2f4d50964d81d5a87e7dae2d1ed42d2c
         <PackageReference Include="Soenneker.Utils.Test" Version="4.0.324" />
         <PackageReference Include="Soenneker.Tests.HostedUnit" Version="4.0.189" />
         <PackageReference Include="TUnit" Version="1.65.38" />
